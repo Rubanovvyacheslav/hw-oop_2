@@ -9,9 +9,9 @@ public class Main {
         Bicycle gt = new Bicycle("GT Avalanche", 2);
         Bicycle cannondale = new Bicycle("Cannondale Trails", 2);
 
-
-        passat.check();
-        mercedes.check();
-        cannondale.check();
+        ServiceStation serviceStation = new ServiceStation();
+        serviceStation.check(passat);
+        serviceStation.check(mercedes);
+        serviceStation.check(cannondale);
     }
 }

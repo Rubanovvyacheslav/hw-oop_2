@@ -1,4 +1,4 @@
-public abstract class Transport {
+public abstract class Transport implements Serviceable {
     private String modelName;
     private int wheelsCount;
 
@@ -7,7 +7,9 @@ public abstract class Transport {
         this.wheelsCount = wheelsCount;
     }
 
-    abstract void check();
+    public void doService() {
+        System.out.println("Обслуживаем " + this.getModelName());
+    }
 
     @Override
     public String toString() {

@@ -1,4 +1,4 @@
-public class Car extends Transport {
+public class Car extends Bicycle {
 
     private String modelName;
     private int wheelsCount;
@@ -8,22 +8,12 @@ public class Car extends Transport {
     }
 
     @Override
-    void check() {
-        System.out.println("Обслуживаем " + this.getModelName());
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            System.out.println("меняем покрышку");
-        }
+    public void doService() {
+        super.doService();
+        checkEngine();
+    }
+
+    void checkEngine() {
         System.out.println("Проверяем двигатель");
-        System.out.println();
-    }
-
-    @Override
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    @Override
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
     }
 }
